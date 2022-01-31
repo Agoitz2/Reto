@@ -1,11 +1,11 @@
 package alumnos;
 
-public class Notas {
+public class Nota {
 	
 	private int Evaluacion;
-	private String[] modulos;
+	private int[] modulos;
 	
-	public Notas(int e, String[] m) {
+	public Nota(int e, int[] m) {
 		this.Evaluacion = e;
 		this.modulos = m;
 	}
