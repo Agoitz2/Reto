@@ -17,9 +17,10 @@ public class Aplicacion {
 	private void anadirAlumnos() {
 		
 		if (contador < array.length) {
-			array[contador] = new Alumno(leer.next(),leer.next(),leer.next(),leer.nextInt(),leer.next());
+			array[contador] = new Alumno(leer.next(),leer.next(),leer.next(),leer.nextInt(),leer.next(),leer.next());
 			contador++;
 		}
+		
 		
 		
 	}
@@ -27,15 +28,16 @@ public class Aplicacion {
 	
 	
 	
-	private String alumnoToString(String DNI) {
+	private void alumnoToString(String DNI) {
 		
-		for (int i = 0; i < array.length; i++) {
+		for (int i = 0; i < array.length-(contador+1); i++) {
 			if (array[i].getDNI().equals(DNI)) {
-				return array[i].alumnoToString1();
-			}
+				System.out.println(array[i].alumnoToString1());
+				System.out.println();
+				
+			}	
 		}
-		
-		return "Error";
+	
 	}
 	
 	
@@ -59,7 +61,7 @@ public class Aplicacion {
 				anadirAlumnos();
 				break;
 			case 2:
-				System.out.println(alumnoToString(leer.next()));
+				alumnoToString(leer.next());
 				break;
 			case 3:
 				salir = true;
