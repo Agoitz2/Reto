@@ -7,12 +7,9 @@ public class prueba {
 		
 		Aplicacion prueba = new Aplicacion(5);
 		
+		prueba.iniciarMenu();
 		
 		
-		prueba.anadirAlumnos();
-		prueba.anadirAlumnos();
-		
-		System.out.println(prueba.alumnoToString("1234"));
 		
 		
 		
