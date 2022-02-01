@@ -9,7 +9,7 @@ public class CicloFormativo {
 			
 	}
 	
-	public String[] asignaturasCiclo() {
+	public  String[] asignaturasCiclo() {
 		
 		if (this.nombreCiclo.equals("DAW")) {
 			String[] modulosDAW = {"Programación","Sistemas Informáticos","FOL","Inglés","Lenguaje de marcas","Bases de Datos"};
@@ -29,7 +29,7 @@ public class CicloFormativo {
 	
 
 	public String getNombreCF() {
-		return nombreCiclo;
+		return this.nombreCiclo;
 	}
 	
 	
@@ -37,7 +37,6 @@ public class CicloFormativo {
 	public void setNombreCF(String nombreCF) {
 		this.nombreCiclo = nombreCF;
 	}
-	
 	
 	
 	

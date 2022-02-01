@@ -14,24 +14,33 @@ public class Alumno {
 	
 	
 	public Alumno(String DNI , String Nombre , String Apellido , int Edad,String Grupo,String Ciclo) {
+		
 		this.DNI = DNI;
+		
 		this.Nombre = Nombre;
+		
 		this.Apellido = Apellido;
+
 		this.Edad = Edad;
+
 		this.Grupo = Grupo;
+		
 		this.ciclo = new CicloFormativo(Ciclo);
-		this.notas = new NotasAlumno(leer.nextInt());
-		System.out.println("hasta aquí");
-		this.notas.asignarNota(leer.nextInt());
 		
 	}
 	
 	
-	
+	public void crearNotas() {
+		this.notas = new NotasAlumno();
+	}
 	
 	
 	public String alumnoToString1() {
-		return this.DNI+" "+this.Nombre+" "+this.Apellido+" "+this.Edad+" "+this.Grupo+" "+ciclo.getNombreCF()+" "+this.notas.notasToString();
+		return "|DNI| :"+this.DNI+"\n"+"|Nombre| :"+this.Nombre+"\n"+"|Apellido| :"+this.Apellido+"\n"+"|Edad| :"+this.Edad+"\n"+"|Grupo| : "+this.Grupo+"\n"+"|Nombre Ciclo| :"+this.ciclo.getNombreCF()+" ";
+	}
+	
+	public String notasAlumnoToString() {
+		return this.notas.toString();
 	}
 	
 	public String getDNI() {
@@ -40,4 +49,15 @@ public class Alumno {
 	
 	
 	
+	public CicloFormativo getCiclo() {
+		return this.ciclo;
+	}
+	
+	public void setNotas() {
+		this.notas.asignarNota(leer.nextInt());
+	}
+	
+	public NotasAlumno getNotas() {
+		return this.notas;
+	}
 }

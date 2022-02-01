@@ -5,17 +5,17 @@ import java.util.Scanner;
 
 public class NotasAlumno {
 	Scanner leer = new Scanner(System.in);
-	private int Evaluacion;
 	private int[] notasEV1 = new int[6];
 	private int[] notasEV2 = new int[6];
 	private int[] notasEV3 = new int[6];
 	int contador1 = 0;
 	int contador2 = 0;
 	int contador3 = 0;
+	Alumno alumno;
+
 	
-	public NotasAlumno(int e) {
-		this.Evaluacion = e;
-	
+	public NotasAlumno() {
+		 this.alumno=Aplicacion.getAlumno();
 	}
 	
 	
@@ -23,43 +23,84 @@ public class NotasAlumno {
 		
 		if (Evaluacion == 1) {
 		do {
+				for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++) {
+					System.out.println(alumno.getCiclo().asignaturasCiclo()[i]);
+					System.out.println();
+					this.notasEV1[contador1] = leer.nextInt();
+					contador1++;
+					
+				}
 				
-				this.notasEV1[contador1] = leer.nextInt();
-				contador1++;
-				System.out.println(contador1);
+				
 			
 		}while(contador1<notasEV1.length);}
+		contador1 = 0;
 		
 		if (Evaluacion == 2) {
 		do {
+			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++) {
+				System.out.println(alumno.getCiclo().asignaturasCiclo()[i]);
+				System.out.println();
+				this.notasEV2[contador2] = leer.nextInt();
+				contador2++;
+				
+			}
 			
-			this.notasEV2[contador2] = leer.nextInt();
-			contador2++;
+			
 			
 			
 		}while(contador2<notasEV2.length);}
+		contador2 = 0;
 		
 		
 		if (Evaluacion == 3) {
 		do {
 			
-			this.notasEV3[contador3] = leer.nextInt();
-			contador3++;
+			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++) {
+				System.out.println(alumno.getCiclo().asignaturasCiclo()[i]);
+				System.out.println();
+				this.notasEV3[contador3] = leer.nextInt();
+				contador3++;
+				
+			}
 			
 		}while(contador3<notasEV3.length);}
+		contador2 = 0;
 		
 		
 		
 
 	}
 	
-	public String notasToString() {
-		for (int i = 0; i < notasEV1.length; i++) {
-			int auxiliar = this.notasEV1[i];
-			return 
+	
+	public void notastoString() {
+		System.out.println("De que evaluación quieres las notas?");
+		int a = leer.nextInt();
+		if (a == 1) {
+			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador1++) {
+				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV1[contador1]+"\n");	 
+				
+			
 		}
+			
+			System.out.println();
+	}else if(a == 2) {
+		for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador2++) {
+			System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV2[contador1]+"\n");
 		
+	
 	}
+		}else if(a == 3) {
+			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador3++) {
+				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV3[contador1]+"\n");
+			
+		
+		}
+		}}
+	
+	
+		
+	
 	
 	
 	
