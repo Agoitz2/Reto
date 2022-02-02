@@ -88,7 +88,8 @@ public class Aplicacion {
 				System.out.println("Introduce el DNI del alumno");
 				setNotasdeAlumno(leer.next());
 				break;
-			
+				
+		
 			}
 			System.out.println("Desea continuar? S/N");
 			salida=leer.next();
@@ -117,10 +118,12 @@ public class Aplicacion {
 			for (int i = 0; i < contador; i++) {
 				if (array[i].getDNI().equals(DNI)) {
 					array[i].getNotas().notastoString();
-				}else if(!array[i].getDNI().equals(DNI)){System.out.println("No existe");}	
+				}
 			}
 		
 		}
+		
+	
 		
 		
 		private void setNotasdeAlumno(String DNI) {
@@ -128,9 +131,7 @@ public class Aplicacion {
 			for (int i = 0; i < contador; i++) {
 				if (array[i].getDNI().equals(DNI)) {
 					array[i].setNotas();
-				}else {System.out.println();
-					
-					System.out.println("ERROR");}
+				}
 			
 		}
 		
