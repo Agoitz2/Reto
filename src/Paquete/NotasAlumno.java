@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class NotasAlumno {
-	Scanner leer = new Scanner(System.in);
+	private Scanner leer = new Scanner(System.in);
 	private int[] notasEV1 = new int[6];
 	private int[] notasEV2 = new int[6];
 	private int[] notasEV3 = new int[6];
 	int contador1 = 0;
 	int contador2 = 0;
 	int contador3 = 0;
-	Alumno alumno;
+	private Alumno alumno;
 
 	
 	public NotasAlumno() {
@@ -65,7 +65,7 @@ public class NotasAlumno {
 			}
 			
 		}while(contador3<notasEV3.length);}
-		contador2 = 0;
+		contador3 = 0;
 		
 		
 		
@@ -86,13 +86,13 @@ public class NotasAlumno {
 			System.out.println();
 	}else if(a == 2) {
 		for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador2++) {
-			System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV2[contador1]+"\n");
+			System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV2[contador2]+"\n");
 		
 	
 	}
 		}else if(a == 3) {
 			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador3++) {
-				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV3[contador1]+"\n");
+				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV3[contador3]+"\n");
 			
 		
 		}

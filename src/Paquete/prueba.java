@@ -8,10 +8,7 @@ public class prueba {
 		Aplicacion prueba = new Aplicacion(5);
 		prueba.iniciarMenu();
 		
-		
-		
-		
-		
+	
 	}
 	
 	

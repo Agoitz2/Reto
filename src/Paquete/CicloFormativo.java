@@ -12,10 +12,10 @@ public class CicloFormativo {
 	public  String[] asignaturasCiclo() {
 		
 		if (this.nombreCiclo.equals("DAW")) {
-			String[] modulosDAW = {"Programación","Sistemas Informáticos","FOL","Inglés","Lenguaje de marcas","Bases de Datos"};
+			String[] modulosDAW = {"|Programación|","|Sistemas Informáticos|","|FOL|","|Inglés|","|Lenguaje de marcas|","|Bases de Datos|"};
 			return modulosDAW;
 		}else if(this.nombreCiclo.equals("ASIR")) {
-			String [] modulosASIR ={"FOL","Sistemas informaticos","Redes","Lenguaje de marcas","Bases de datos","Fundamentos del hardware"};
+			String [] modulosASIR ={"|FOL|","|Sistemas informaticos|","|Redes|","Lenguaje de marcas","Bases de datos","Fundamentos del hardware"};
 			return modulosASIR;
 		}
 		

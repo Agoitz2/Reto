@@ -4,7 +4,7 @@ package Paquete;
 import java.util.Scanner;
 
 public class Aplicacion {
-	Scanner leer = new Scanner(System.in);
+	private Scanner leer = new Scanner(System.in);
 	private static Alumno array[];
 	
 	private static int contador = 0;
@@ -22,9 +22,7 @@ public class Aplicacion {
 			contador++;
 			
 		}
-		array[contador-1].crearNotas();
-		System.out.println("Introduce de que evaluacion quieres poner notas");
-		array[contador-1].setNotas();
+		
 		
 		
 	}
@@ -58,27 +56,36 @@ public class Aplicacion {
 			System.out.println();
 			System.out.println("3.Imprimir Notas de Alumno");
 			System.out.println();
-			System.out.println("4.Salir");
+			System.out.println("4.Cambiar notas evaluacion alumno");
+			System.out.println();
+			System.out.println("5.Salir");
 			System.out.println();
 			System.out.println("Introduce numero para escoger opcion");
 			opcion=leer.nextInt();
 			switch(opcion) {
 			case 1:
+				 
 				System.out.println("Introduce los datos en este orden : DNI,Nombre,Apellido,Edad,Grupo y Siglas de tu ciclo(EJ : DAW)");
 				anadirAlumnos();
-				
 				break;
 			case 2:
+				System.out.println("Introduce el DNI del alumno");
 				alumnoToString(leer.next());
 				break;
-			case 4:
+			case 5:
 				
 				System.out.println("Saliendo...");
 				System.exit(0);
 				break;
 				
 			case 3:
+				System.out.println("Introduce el DNI del alumno");
 				alumnotasToString(leer.next());
+				break;
+			
+			case 4 :
+				System.out.println("Introduce el DNI del alumno");
+				setNotasdeAlumno(leer.next());
 				break;
 			
 			}
@@ -117,8 +124,22 @@ public class Aplicacion {
 		}
 		
 		
+		private void setNotasdeAlumno(String DNI) {
+			System.out.println("Introduce de que evaluacion quieres poner notas");
+
+			for (int i = 0; i < contador; i++) {
+				if (array[i].getDNI().equals(DNI)) {
+					array[i].setNotas();
+				}
+			
+		}
+		
+		
 		
 	}
+		
+
+}
 	
 	
 
