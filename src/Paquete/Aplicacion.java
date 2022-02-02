@@ -4,7 +4,7 @@ package Paquete;
 import java.util.Scanner;
 
 public class Aplicacion {
-	private Scanner leer = new Scanner(System.in);
+	Scanner leer = new Scanner(System.in);
 	private static Alumno array[];
 	
 	private static int contador = 0;
@@ -22,6 +22,7 @@ public class Aplicacion {
 			contador++;
 			
 		}
+		array[contador-1].crearNotas();
 		
 		
 		
@@ -115,10 +116,8 @@ public class Aplicacion {
 			
 			for (int i = 0; i < contador; i++) {
 				if (array[i].getDNI().equals(DNI)) {
-					System.out.println(array[i].alumnoToString1());
-					System.out.println();
 					array[i].getNotas().notastoString();
-				}	
+				}else if(!array[i].getDNI().equals(DNI)){System.out.println("No existe");}	
 			}
 		
 		}
@@ -126,11 +125,12 @@ public class Aplicacion {
 		
 		private void setNotasdeAlumno(String DNI) {
 			System.out.println("Introduce de que evaluacion quieres poner notas");
-
 			for (int i = 0; i < contador; i++) {
 				if (array[i].getDNI().equals(DNI)) {
 					array[i].setNotas();
-				}
+				}else {System.out.println();
+					
+					System.out.println("ERROR");}
 			
 		}
 		

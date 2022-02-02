@@ -77,20 +77,29 @@ public class NotasAlumno {
 		System.out.println("De que evaluación quieres las notas?");
 		int a = leer.nextInt();
 		if (a == 1) {
+			System.out.println();
+			System.out.println("  |||Notas 1EV|||");
+			System.out.println();
 			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador1++) {
 				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV1[contador1]+"\n");	 
 				
 			
 		}
 			
-			System.out.println();
+			
 	}else if(a == 2) {
+		System.out.println();
+		System.out.println("  |||Notas 2EV|||");
+		System.out.println();
 		for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador2++) {
 			System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV2[contador2]+"\n");
 		
 	
 	}
 		}else if(a == 3) {
+			System.out.println();
+			System.out.println("  |||Notas 3EV|||");
+			System.out.println();
 			for (int i = 0; i < alumno.getCiclo().asignaturasCiclo().length; i++,contador3++) {
 				System.out.print(alumno.getCiclo().asignaturasCiclo()[i]+" "+this.notasEV3[contador3]+"\n");
 			
